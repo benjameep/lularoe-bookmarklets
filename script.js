@@ -1,0 +1,1 @@
+fetch("/store/getiteminventories", {"credentials":"include","body":null,"method":"POST"}).then(function(r){return r.json()}).then(function(data){data.inventories.forEach(function(n){$('.item-cart-qty[data-itemcode=\"'+n.ItemCode+'\"]').attr('placeholder','0 / '+n.Quantity)})})
